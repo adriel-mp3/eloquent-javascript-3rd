@@ -7,7 +7,7 @@ for (let number = 1; number <= 100; number++) {
   const isDivisibleByFive = number % 5 === 0;
   
   if (isDivisibleByThree) {
-        output = "Fizz";
+      output = "Fizz";
   } 
 
   if (isDivisibleByFive) {
