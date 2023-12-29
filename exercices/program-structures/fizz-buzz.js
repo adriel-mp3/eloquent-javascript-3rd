@@ -5,10 +5,16 @@ Write a program that uses console.log to print all the numbers from 1 to 100, wi
 for (let number = 1; number <= 100; number++) {
   const isDivisibleByThree = number % 3 === 0;
   const isDivisibleByFive = number % 5 === 0;
+  
+  if (isDivisibleByThree) {
+        output = "Fizz";
+  } 
 
-  if (isDivisibleByThree) console.log("Fizz");
-  else if (isDivisibleByFive) console.log("Buzz");
-  else console.log(number)
+  if (isDivisibleByFive) {
+      output = "Buzz";
+  }
+  
+  console.log(output | number);
 }
 
 /* 
@@ -17,10 +23,16 @@ When you have that working, modify your program to print "FizzBuzz" for numbers 
 for (let number = 1; number <= 100; number++) {
   const isDivisibleByThree = number % 3 === 0;
   const isDivisibleByFive = number % 5 === 0;
-  const isDivisibleByBoth = isDivisibleByThree && isDivisibleByFive;
   
-  if (isDivisibleByBoth) console.log("FizzBuzz");
-  else if (isDivisibleByThree) console.log("Fizz")
-  else if (isDivisibleByFive) console.log("Buzz");
-  else console.log(number)
+  let output = "";
+  
+  if (isDivisibleByThree) {
+        output = "Fizz"
+    } 
+
+  if (isDivisibleByFive) {
+        output += "Buzz";
+    }
+
+  console.log(output || number);
 }
