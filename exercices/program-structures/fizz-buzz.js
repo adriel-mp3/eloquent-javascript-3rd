@@ -34,5 +34,5 @@ for (let number = 1; number <= 100; number++) {
         output += "Buzz";
     }
 
-  console.log(output || number);
+  console.log(output | number);
 }
